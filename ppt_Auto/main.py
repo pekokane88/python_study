@@ -23,6 +23,7 @@ class mainWindow(QMainWindow, Ui_MainWindow):
             current_text = current_time + inform
             img_path = self.imgLabel.text()
 
+            # 본인의 base가 될 ppt 를 지정하여서 slide에 있는 shape를 지정해주고 그 shape 의 type에 맞게 데이터를 넣어주면 된다.
             prs = Presentation('base.pptx')
             main_slide = prs.slides[0]
 
