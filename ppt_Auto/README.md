@@ -22,7 +22,7 @@
 <ul>
   - pyinstaller 를 이용한 실행파일화
   - 다중 슬라이드 생성 및 편집
-  - Clean Code
+  - 현재 base.pptx 라는 기본 틀을 불러와서 지정해둔 shape 에 title, image, text를 추가하는 방식에서 스크립트로 전부 생성할 수 있도록 수정.
 </ul>
 
 ###### 수정 날짜 22.08.19 15:47
