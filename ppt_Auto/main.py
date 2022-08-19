@@ -19,8 +19,8 @@ class mainWindow(QMainWindow, Ui_MainWindow):
             title = self.titleEdit.text()
             inform = self.informEdit.toPlainText()
             now = datetime.now()
-            current_time = now.strftime("%Y-%m-%d %H:%M:%S\n")
-            current_text = current_time + inform
+            current_time = now.strftime("%Y-%m-%d %H:%M:%S")
+            current_text = current_time + '\n' + inform
             img_path = self.imgLabel.text()
 
             # 본인의 base가 될 ppt를 지정하여서 slide에 있는 shape를 지정해주고 그 shape 의 type에 맞게 데이터를 넣어주면 된다.
@@ -46,7 +46,7 @@ class mainWindow(QMainWindow, Ui_MainWindow):
             text_select.text = current_text
             
             # 파일 저장 양식
-            output = now.strftime("%Y-%m-%d %H_%M_%S") + '.pptx'
+            output = current_time + '.pptx'
             prs.save(output)
             QMessageBox.about(self, "About", "Work Done!")
             QApplication.closeAllWindows()
